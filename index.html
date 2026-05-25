@@ -309,20 +309,38 @@ LIVE XLSX DATABASE PREVIEW
 </section>
 
 <script>
-fetch("downloads/Soccer_Global_Ranking_16000_Clubs.xlsx")
+fetch("./downloads/Soccer_Global_Ranking_16000_Clubs.xlsx")
 .then(response => response.arrayBuffer())
 .then(data => {
 const workbook = XLSX.read(data);
-const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-const html = XLSX.utils.sheet_to_html(firstSheet);
+const sheet = workbook.Sheets[workbook.SheetNames[0]];
+/* CONVERTE PARA JSON */
+const rows = XLSX.utils.sheet_to_json(sheet, {
+header:1
+});
+/* MOSTRA SOMENTE 100 LINHAS */
+const previewRows = rows.slice(0, 25);
+let html = "<table>";
+previewRows.forEach((row, rowIndex) => {
+html += "<tr>";
+row.forEach(cell => {
+if(rowIndex === 0){
+html += `<th>${cell ?? ""}</th>`;
+}else{
+html += `<td>${cell ?? ""}</td>`;
+}
+});
+html += "</tr>";
+});
+html += "</table>";
 document.getElementById("xlsx-table").innerHTML = html;
 })
-
 .catch(error => {
-document.getElementById("xlsx-table").innerHTML =
-"<p style='color:black'>Unable to load spreadsheet preview.</p>";
 console.error(error);
+document.getElementById("xlsx-table").innerHTML =
+"<p style='color:white'>Unable to load spreadsheet preview.</p>";
 });
+
 </script>
 
 <!--
