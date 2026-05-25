@@ -17,30 +17,63 @@ text-align:center;
 color:white;
 }
 
-.xlsx-container table{
-border-collapse:collapse;
+.xlsx-container{
+
+background:white;
+
+border-radius:14px;
+
+padding:20px;
+
+max-height:700px;
+
+overflow-x:auto;
+overflow-y:auto;
+
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+
 width:100%;
+max-width:100%;
+
+border:1px solid #222;
+}
+
+.xlsx-container table{
+
+border-collapse:collapse;
+
 font-family:Arial,sans-serif;
 font-size:14px;
-color:#000;
+
 background:white;
+color:#000;
+
+width:max-content;
+min-width:100%;
 }
 
 .xlsx-container td,
 .xlsx-container th{
-border:1px solid #d0d7de;
-padding:8px;
-text-align:left;
-color:#000 !important;
-background:white;
-}
 
-.xlsx-container *{
+border:1px solid #d0d7de;
+
+padding:8px;
+
+text-align:left;
+
 color:#000 !important;
+
+white-space:nowrap;
+
+background:white;
 }
 
 .xlsx-container tr:nth-child(even){
 background:#f5f5f5;
+}
+
+.xlsx-container *{
+color:#000 !important;
 }
 
 </style>
@@ -309,36 +342,63 @@ LIVE XLSX DATABASE PREVIEW
 </section>
 
 <script>
+
 fetch("./downloads/Soccer_Global_Ranking_16000_Clubs.xlsx")
+
 .then(response => response.arrayBuffer())
+
 .then(data => {
+
 const workbook = XLSX.read(data);
+
 const sheet = workbook.Sheets[workbook.SheetNames[0]];
+
 /* CONVERTE PARA JSON */
 const rows = XLSX.utils.sheet_to_json(sheet, {
 header:1
 });
-/* MOSTRA SOMENTE 100 LINHAS */
+
+/* LIMITA PARA 25 LINHAS */
 const previewRows = rows.slice(0, 25);
+
+/* CRIA TABELA */
 let html = "<table>";
+
 previewRows.forEach((row, rowIndex) => {
+
 html += "<tr>";
+
 row.forEach(cell => {
+
 if(rowIndex === 0){
+
 html += `<th>${cell ?? ""}</th>`;
+
 }else{
+
 html += `<td>${cell ?? ""}</td>`;
+
 }
+
 });
+
 html += "</tr>";
+
 });
+
 html += "</table>";
+
 document.getElementById("xlsx-table").innerHTML = html;
+
 })
+
 .catch(error => {
+
 console.error(error);
+
 document.getElementById("xlsx-table").innerHTML =
-"<p style='color:white'>Unable to load spreadsheet preview.</p>";
+"<p style='color:black'>Unable to load spreadsheet preview.</p>";
+
 });
 
 </script>
