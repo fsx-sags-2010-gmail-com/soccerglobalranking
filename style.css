@@ -877,3 +877,14 @@ gap:30px;
   backdrop-filter: blur(10px);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+/* Efeito Premium de Brilho e Zoom para o Dicionário de Dados */
+#database img[src*="index.png"] {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+}
+
+#database img[src*="index.png"]:hover {
+    transform: scale(1.015);
+    filter: brightness(1.04) drop-shadow(0 0 30px rgba(0, 212, 255, 0.25));
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+}
