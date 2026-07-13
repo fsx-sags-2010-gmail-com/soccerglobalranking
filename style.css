@@ -137,9 +137,9 @@ color:#d1d5db;
 margin-bottom:20px;
 }
 
-/* ===== NOVO: LOGO DISCRETO COM EFEITOS DA INFO-BOX ===== */
+/* ===== LOGO DISCRETO COM EFEITOS DA INFO-BOX ===== */
 .logo-discreto {
-  width: 130px; /* Tamanho discreto */
+  width: 130px; 
   height: auto;
   display: block;
   margin-bottom: 24px;
@@ -400,14 +400,12 @@ display:none;
 
 }
 
-
 #database,
 #systems,
 #updates,
 #downloads{
 scroll-margin-top:120px;
 }
-
 
 .card,
 .grid-card,
@@ -449,18 +447,9 @@ font-size:34px !important;
 
 }
 
-
 html{
 scroll-behavior:smooth;
 }
-
-#database,
-#systems,
-#updates,
-#downloads{
-scroll-margin-top:120px;
-}
-
 
 .info-universe{
 width:90%;
@@ -542,9 +531,7 @@ font-size:18px;
 
 }
 
-
 /* ===== PREMIUM GLOW & MOTION EFFECTS ===== */
-
 .card,
 .grid-card,
 .download-card,
@@ -558,7 +545,8 @@ font-size:18px;
 .btn-secondary,
 .menu a,
 .logo,
-.badge{
+.badge,
+.qr-box img{
 transition:
 transform 0.35s ease,
 box-shadow 0.35s ease,
@@ -586,10 +574,11 @@ background:rgba(15,23,42,0.96);
 .intro-image img:hover,
 .image-block img:hover,
 .formula-image:hover,
-.download-card img:hover{
-transform:scale(1.03);
+.download-card img:hover,
+.qr-box img:hover{
+transform:scale(1.02);
 filter:
-brightness(1.08)
+brightness(1.05)
 drop-shadow(0 0 25px rgba(0,212,255,0.25));
 }
 
@@ -681,105 +670,7 @@ box-shadow:0 0 0 rgba(0,212,255,0);
 animation:cyanPulse 6s infinite ease-in-out;
 }
 
-
-
 /* ===== SUPPORT / DONATION SECTION ===== */
-
-.support-section{
-width:90%;
-margin:120px auto 60px;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.support-box{
-width:100%;
-max-width:1100px;
-background:rgba(15,23,42,0.92);
-border:1px solid rgba(0,212,255,0.22);
-border-radius:36px;
-padding:70px;
-text-align:center;
-backdrop-filter:blur(10px);
-box-shadow:
-0 0 30px rgba(0,212,255,0.12),
-0 0 80px rgba(0,0,0,0.35);
-transition:0.35s ease;
-}
-
-.support-box:hover{
-transform:translateY(-10px) scale(1.01);
-box-shadow:
-0 0 35px rgba(0,212,255,0.18),
-0 0 90px rgba(0,212,255,0.10);
-}
-
-.support-box h2{
-font-size:56px;
-margin-bottom:30px;
-color:#00d4ff;
-text-shadow:
-0 0 15px rgba(0,212,255,0.35),
-0 0 35px rgba(0,212,255,0.15);
-}
-
-.support-box p{
-font-size:22px;
-line-height:1.9;
-color:#d1d5db;
-max-width:900px;
-margin:auto auto 45px;
-}
-
-.donate-btn{
-display:inline-block;
-padding:22px 42px;
-border-radius:18px;
-background:#00d4ff;
-color:black;
-font-weight:900;
-font-size:18px;
-letter-spacing:1px;
-text-decoration:none;
-transition:0.35s ease;
-box-shadow:
-0 0 20px rgba(0,212,255,0.25),
-0 0 50px rgba(0,212,255,0.12);
-}
-
-.donate-btn:hover{
-transform:translateY(-5px) scale(1.05);
-background:#4be3ff;
-box-shadow:
-0 0 30px rgba(0,212,255,0.45),
-0 0 60px rgba(0,212,255,0.25);
-}
-
-@media(max-width:900px){
-
-.support-box{
-padding:40px 26px;
-}
-
-.support-box h2{
-font-size:38px;
-}
-
-.support-box p{
-font-size:18px;
-}
-
-.donate-btn{
-width:100%;
-font-size:16px;
-}
-
-}
-
-
-/* ===== PAYPAL SUPPORT SECTION ===== */
-
 .support-section{
 width:90%;
 margin:80px auto 120px;
@@ -876,31 +767,7 @@ box-shadow:
 0 0 80px rgba(0,212,255,0.25);
 }
 
-@media(max-width:900px){
-
-.support-box{
-padding:45px 26px;
-}
-
-.support-box h2{
-font-size:40px;
-}
-
-.support-box p{
-font-size:18px;
-}
-
-.donate-btn{
-width:100%;
-font-size:16px;
-padding:20px;
-}
-
-}
-
-
-/* ===== QR CODE DONATION AREA ===== */
-
+/* ===== QR CODE / IMAGEM SUPPORT DONATION AREA ===== */
 .donation-area{
 margin-top:50px;
 display:flex;
@@ -930,11 +797,9 @@ box-shadow:
 }
 
 .qr-box img{
-width:220px;
-height:220px;
 border-radius:18px;
-background:white;
-padding:10px;
+background:none;
+padding:0;
 }
 
 .qr-box p{
@@ -953,30 +818,42 @@ align-items:center;
 }
 
 @media(max-width:900px){
+.support-box{
+padding:45px 26px;
+}
+
+.support-box h2{
+font-size:40px;
+}
+
+.support-box p{
+font-size:18px;
+}
+
+.donate-btn{
+width:100%;
+font-size:16px;
+padding:20px;
+}
 
 .donation-area{
 flex-direction:column;
 gap:30px;
 }
-
-.qr-box img{
-width:180px;
-height:180px;
 }
 
-/* Excel Preview Section - layout vertical com título centralizado */
+/* ===== EXCEL PREVIEW SECTION ===== */
 .excel-preview-section {
   width: 100%;
   display: flex;
-  flex-direction: column;      /* empilha título + figura */
+  flex-direction: column;      
   justify-content: center;
-  align-items: center;         /* centraliza horizontalmente */
+  align-items: center;         
   margin: 60px 0;
   padding: 20px;
-  gap: 14px;                   /* espaço entre título e imagem */
+  gap: 14px;                   
 }
 
-/* título acima da imagem */
 .excel-title {
   text-align: center;
   font-size: 18px;
@@ -988,18 +865,15 @@ height:180px;
   max-width: 1200px;
 }
 
-/* figure como container da imagem */
 .excel-preview-container {
   display: block;
   max-width: 1200px;
   width: 100%;
-  height: 500px;               /* ajuste conforme desejar */
+  height: 500px;               
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   border-radius: 24px;
   backdrop-filter: blur(10px);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
 }
