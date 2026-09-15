@@ -1,10 +1,11 @@
-XML
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.soccerglobalranking.com/</loc>
-    <lastmod>2026-05-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://www.soccerglobalranking.com/index.html</loc></url>
+  <url><loc>https://www.soccerglobalranking.com/pt.html</loc></url>
+  <url><loc>https://www.soccerglobalranking.com/en.html</loc></url>
+  <url><loc>https://www.soccerglobalranking.com/es.html</loc></url>
+  <url><loc>https://www.soccerglobalranking.com/fr.html</loc></url>
+  <url><loc>https://www.soccerglobalranking.com/de.html</loc></url>
+  <url><loc>https://www.soccerglobalranking.com/ar.html</loc></url>
+  <url><loc>https://www.soccerglobalranking.com/ru.html</loc></url>
 </urlset>
