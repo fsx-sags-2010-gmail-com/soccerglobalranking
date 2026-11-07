@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ================= PÁGINAS PRINCIPAIS MULTILÍNGUES ================= -->
   
-  <!-- Página Principal / Raiz -->
   <url>
     <loc>https://www.soccerglobalranking.com/</loc>
     <lastmod>2026-11-07</lastmod>
@@ -10,12 +11,11 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Versão em Português -->
   <url>
     <loc>https://www.soccerglobalranking.com/pt.html</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.soccerglobalranking.com/pt.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.soccerglobalranking.com/en.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.soccerglobalranking.com/es.html"/>
@@ -26,31 +26,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.soccerglobalranking.com/en.html"/>
   </url>
 
-  <!-- Versão em Inglês -->
   <url>
     <loc>https://www.soccerglobalranking.com/en.html</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.soccerglobalranking.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.soccerglobalranking.com/pt.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.soccerglobalranking.com/es.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.soccerglobalranking.com/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.soccerglobalranking.com/de.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.soccerglobalranking.com/ar.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.soccerglobalranking.com/ru.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.soccerglobalranking.com/en.html"/>
   </url>
 
-  <!-- Versão em Espanhol -->
   <url>
     <loc>https://www.soccerglobalranking.com/es.html</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Versão em Francês -->
   <url>
     <loc>https://www.soccerglobalranking.com/fr.html</loc>
     <lastmod>2026-11-07</lastmod>
@@ -58,7 +47,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Versão em Alemão -->
   <url>
     <loc>https://www.soccerglobalranking.com/de.html</loc>
     <lastmod>2026-11-07</lastmod>
@@ -66,7 +54,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Versão em Árabe -->
   <url>
     <loc>https://www.soccerglobalranking.com/ar.html</loc>
     <lastmod>2026-11-07</lastmod>
@@ -74,12 +61,53 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Versão em Russo -->
   <url>
     <loc>https://www.soccerglobalranking.com/ru.html</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- ================= SUBSEÇÕES E CATEGORIAS POPULARES ================= -->
+
+  <!-- Top 100 Global -->
+  <url>
+    <loc>https://www.soccerglobalranking.com/top100.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Ranking América do Sul (CONMEBOL) -->
+  <url>
+    <loc>https://www.soccerglobalranking.com/conmebol.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Ranking Europa (UEFA) -->
+  <url>
+    <loc>https://www.soccerglobalranking.com/uefa.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Ranking Brasil (Séries A, B, C, D) -->
+  <url>
+    <loc>https://www.soccerglobalranking.com/brasil.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Metodologia e Critérios de Cálculo -->
+  <url>
+    <loc>https://www.soccerglobalranking.com/about.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
